@@ -23,8 +23,8 @@
       })();
     </script>
     <title>Vortek.Tech</title>
-    <script type="module" crossorigin src="/assets/index-BAsDTsF9.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-wYM-V7ix.css">
+    <script type="module" crossorigin src="/assets/index-Ci7t_dbD.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-VaFHc_NY.css">
   </head>
   <body>
     <div id="app">
@@ -179,7 +179,7 @@
         </section>
 
         <section class="product-demo" id="demo">
-          <div class="section-label">Interactive demo</div>
+          <div class="section-label">Product demo</div>
           <div class="intro-grid demo-intro">
             <h2>Watch campaign proof become a client update</h2>
             <p>
@@ -187,20 +187,36 @@
               items / AI follow-up / report readiness
             </p>
           </div>
-          <div class="demo-frame">
-            <iframe
-              title="campaign.os interactive reporting demo"
-              src="/campaign-reporting-audit-demo/Campaign%20Reporting%20Audit%20Demo.html?v=20260523-4"
-              loading="lazy"
-              allow="fullscreen"
-            ></iframe>
-            <button class="demo-play" type="button" aria-label="Play campaign.os demo">
-              <span class="demo-play-icon">▶</span>
-              <span>
-                <b>Watch the demo</b>
-                <small>Press play · 45 seconds</small>
-              </span>
-            </button>
+          <div class="demo-stage">
+            <div class="demo-frame">
+              <video
+                class="demo-desktop-media"
+                data-src="/assets/campaign-reporting-audit-demo-desktop.mp4"
+                poster="/assets/campaign-reporting-audit-demo-desktop-poster.jpg?v=20260523-1"
+                preload="none"
+                playsinline
+                aria-label="campaign.os desktop reporting demo"
+              ></video>
+              <video
+                class="demo-mobile-media"
+                data-src="/assets/campaign-reporting-audit-demo-mobile.mp4"
+                poster="/assets/campaign-reporting-audit-demo-mobile-poster.jpg?v=20260523-2"
+                preload="none"
+                playsinline
+                aria-label="campaign.os mobile reporting demo"
+              ></video>
+              <button class="demo-play" type="button" aria-label="Play campaign.os demo">
+                <span class="demo-play-icon">▶</span>
+                <span>
+                  <b>Watch the demo</b>
+                  <small class="demo-time-desktop">Press play · 42 seconds</small>
+                  <small class="demo-time-mobile">Press play · 42 seconds</small>
+                </span>
+              </button>
+            </div>
+            <div class="demo-complete" hidden>
+              <a class="button primary" href="#contact">Request audit</a>
+            </div>
           </div>
         </section>
 
