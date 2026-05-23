@@ -1,0 +1,355 @@
+/* ==========================================================
+   campaign.os — VIDEO scenes
+   Styles for drawing / promises / tools / cta scenes.
+   ========================================================== */
+
+/* Scene slot container — stacked vertically in a strip for seamless camera-pan transitions */
+.scenes-strip {
+  position: absolute; inset: 0;
+  transition: transform 1.05s cubic-bezier(.65, 0, .25, 1);
+  will-change: transform;
+  z-index: 1;
+}
+.scene-slot {
+  position: absolute;
+  left: 0; right: 0;
+  height: 100%;
+  /* top is set inline per-index */
+}
+
+.scene {
+  position: absolute; inset: 0;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+/* ============================================================
+   SCENE 1 — LIVING ORNAMENT (centered, organic)
+   ============================================================ */
+.s-drawing {
+  background: var(--gallery);
+  color: var(--ink);
+  overflow: hidden;
+}
+.s-drawing .draw-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+.s-drawing .draw-text {
+  position: absolute; top: 56px; left: 0; right: 0;
+  z-index: 5;
+  pointer-events: none;
+  display: flex; flex-direction: column; align-items: center; gap: 24px;
+  text-align: center;
+}
+.s-drawing .draw-text .dt-eyebrow {
+  font-family: var(--font);
+  font-size: 12px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--signal);
+  opacity: 0; filter: blur(2px); transform: scale(0.998);
+  transition: opacity 1.1s ease, filter 1.2s ease, transform 1.2s ease;
+}
+.s-drawing .draw-text .dt-eyebrow.in { opacity: 1; filter: blur(0); transform: scale(1); }
+
+.s-drawing .draw-text .dt-headline-wrap {
+  display: flex; flex-direction: column; gap: 4px;
+}
+.s-drawing .draw-text .dt-h1,
+.s-drawing .draw-text .dt-h2 {
+  font-family: var(--font);
+  font-size: 38px; font-weight: 900; letter-spacing: 0; text-transform: uppercase;
+  line-height: 1.05; color: var(--ink);
+  opacity: 0; filter: blur(3px); transform: scale(0.997);
+  transition: opacity 1.35s ease, filter 1.45s ease, transform 1.55s ease;
+}
+.s-drawing .draw-text .dt-h1 em { font-style: normal; color: var(--signal); }
+.s-drawing .draw-text .dt-h2 .red { color: var(--signal); }
+.s-drawing .draw-text .dt-h1.in,
+.s-drawing .draw-text .dt-h2.in { opacity: 1; filter: blur(0); transform: scale(1); }
+
+/* ============================================================
+   SCENE 2 — PROMISES
+   ============================================================ */
+.s-promises {
+  background: var(--gallery);
+  color: var(--ink);
+  padding: 90px 80px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 50px;
+}
+.s-promises .prom-eyebrow {
+  font-size: 13px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--signal);
+  opacity: 0; filter: blur(2px);
+  transition: opacity 1s ease, filter 1.1s ease;
+}
+.s-promises .prom-eyebrow.in { opacity: 1; filter: blur(0); }
+.s-promises .prom-stack {
+  display: flex; flex-direction: column; gap: 16px;
+  align-self: center;
+}
+.s-promises .prom-line {
+  font-family: var(--font);
+  font-size: 92px; font-weight: 900; line-height: 0.94; letter-spacing: -0.02em; text-transform: uppercase;
+  color: var(--ink);
+  overflow: hidden;
+}
+.s-promises .prom-line .prom-mask {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+.s-promises .prom-line .prom-inner {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px) grayscale(0.2);
+  transform: scale(0.997);
+  transition: opacity 1.35s ease, filter 1.55s ease, transform 1.55s ease;
+}
+.s-promises .prom-line.in .prom-inner { opacity: 1; filter: blur(0) grayscale(0); transform: scale(1); }
+.s-promises .prom-line.out .prom-inner { opacity: 0; filter: blur(4px) grayscale(0.2); transform: scale(1.003); transition-duration: 0.8s; }
+.s-promises .prom-line .red { color: var(--signal); }
+
+.s-promises .prom-foot {
+  font-size: 14px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0; filter: blur(2px);
+  transition: opacity 1s ease, filter 1.15s ease, color 1s ease;
+}
+.s-promises .prom-foot.in { opacity: 1; filter: blur(0); color: var(--ink); }
+
+/* ============================================================
+   SCENE 3 — TOOLS converging into a package
+   ============================================================ */
+.s-tools {
+  background: var(--gallery);
+  overflow: hidden;
+  position: absolute; inset: 0;
+}
+.s-tools .pkg-svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.s-tools .tools-left {
+  position: absolute; left: 56px; top: 80px; max-width: 540px;
+  z-index: 8;
+  pointer-events: none;
+}
+.s-tools .tools-eyebrow {
+  font-size: 12px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--signal);
+  opacity: 0; filter: blur(2px);
+  transition: opacity 1s ease, filter 1.1s ease;
+}
+.s-tools .tools-eyebrow.in { opacity: 1; filter: blur(0); }
+
+.s-tools .tools-headline {
+  margin: 22px 0 0;
+  font-size: 88px; font-weight: 900; line-height: 0.95; letter-spacing: -0.01em; text-transform: uppercase;
+  color: var(--ink);
+  display: flex; flex-direction: column;
+}
+.s-tools .tools-headline .tw-row { display: block; overflow: hidden; }
+.s-tools .tools-headline .tw-mask {
+  display: inline-block; overflow: hidden;
+}
+.s-tools .tools-headline .tw-mask > span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px) grayscale(0.2);
+  transform: scale(0.997);
+  transition: opacity 1.2s ease, filter 1.35s ease, transform 1.4s ease;
+}
+.s-tools .tools-headline.in .tw-mask > span {
+  opacity: 1;
+  filter: blur(0) grayscale(0);
+  transform: scale(1);
+}
+.s-tools .tools-headline i { font-style: normal; }
+.s-tools .tools-headline .red { color: var(--signal); }
+
+.s-tools .tools-sub {
+  margin-top: 32px;
+  font-size: 14px; font-weight: 800; letter-spacing: 0.20em; text-transform: uppercase;
+  color: var(--ink-2); line-height: 1.7;
+  opacity: 0; filter: blur(2px);
+  transition: opacity 1s ease, filter 1.1s ease;
+}
+.s-tools .tools-sub.in { opacity: 1; filter: blur(0); }
+
+.s-tools .tools-layer { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+
+.tool-plate {
+  position: absolute;
+  top: 0; left: 0;
+  width: 128px; height: 112px;
+  background: #fff;
+  border: 1px solid var(--line-2);
+  padding: 14px 12px 10px;
+  display: flex; flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 4;
+  box-shadow: 0 16px 26px -16px rgba(9,9,9,0.32);
+}
+.tool-plate.in { opacity: 1; }
+.tool-plate .tp-ic {
+  width: 34px; height: 34px;
+  color: var(--ink);
+}
+.tool-plate .tp-ic svg { width: 100%; height: 100%; }
+.tool-plate .tp-n {
+  margin-top: auto;
+  font-size: 11px; font-weight: 900; letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--ink); line-height: 1.1;
+}
+
+.tool-trail {
+  position: absolute;
+  top: 0; left: 0;
+  width: 128px; height: 112px;
+  background: var(--gallery);
+  border: 1px solid var(--line);
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.s-tools .pkg-caption {
+  position: absolute; right: 56px; bottom: 56px;
+  font-size: 13px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-2);
+  opacity: 0; filter: blur(2px);
+  transition: opacity 1s ease, filter 1.15s ease;
+  z-index: 9;
+}
+.s-tools .pkg-caption.in { opacity: 1; filter: blur(0); }
+
+/* ============================================================
+   SCENE 5 — FINAL CTA
+   ============================================================ */
+.s-cta {
+  background: var(--gallery);
+  padding: 56px 80px;
+  display: flex; flex-direction: column;
+  position: relative;
+}
+
+.s-cta > * {
+  opacity: 0;
+  filter: blur(3px) grayscale(0.18);
+  transform: scale(0.998);
+  transition: opacity 1.25s ease, filter 1.45s ease, transform 1.55s ease;
+}
+.s-cta > .in { opacity: 1; filter: blur(0) grayscale(0); transform: scale(1); }
+
+.cta-frame-top {
+  display: flex; gap: 12px; align-items: center;
+  font-size: 12px; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink);
+}
+.cta-frame-top .sep { color: var(--line-2); }
+.cta-frame-top span:last-child { font-weight: 700; text-transform: lowercase; color: var(--ink-2); letter-spacing: -0.005em; font-size: 14px; }
+
+.cta-eyebrow {
+  margin-top: 60px;
+  font-size: 13px; font-weight: 800; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--signal);
+}
+.cta-title {
+  margin: 18px 0 0;
+  font-size: 130px; font-weight: 900; line-height: 0.94; letter-spacing: -0.02em; text-transform: uppercase;
+  color: var(--ink);
+  max-width: 1100px;
+}
+.cta-rule { width: 100px; height: 2px; background: var(--ink); margin: 36px 0 0; }
+.cta-sub {
+  margin-top: 24px;
+  font-size: 16px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-2); line-height: 1.7;
+  max-width: 720px;
+}
+
+.cta-actions {
+  margin-top: 36px;
+  display: flex; gap: 14px; align-items: center;
+}
+.cta-btn-primary {
+  background: var(--ink); color: var(--gallery);
+  padding: 18px 28px;
+  font-size: 13px; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-flex; align-items: center; gap: 14px;
+  text-decoration: none;
+}
+.cta-btn-primary .arr { font-size: 16px; }
+.cta-btn-secondary {
+  background: transparent; color: var(--ink);
+  border: 1px solid var(--line-2);
+  padding: 18px 22px;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.cta-meta-row {
+  margin-top: auto;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.cta-meta-row > div {
+  display: flex; flex-direction: column; gap: 8px;
+  padding-right: 24px;
+}
+.cta-meta-row > div b {
+  font-size: 13px; font-weight: 900; color: var(--signal); letter-spacing: 0.16em;
+}
+.cta-meta-row > div span {
+  font-size: 22px; font-weight: 900; letter-spacing: 0.02em; text-transform: uppercase; color: var(--ink);
+}
+
+/* ============================================================
+   VIDEO CONTROLS (bottom-right)
+   ============================================================ */
+.v-controls {
+  position: absolute;
+  bottom: 22px; right: 22px;
+  display: none; align-items: center; gap: 10px;
+  background: var(--gallery);
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  z-index: 60;
+}
+.v-ctl {
+  width: 28px; height: 28px; display: grid; place-items: center;
+  background: transparent; color: var(--ink);
+}
+.v-ctl:hover { background: var(--paper-2); }
+.v-ctl.primary { background: var(--ink); color: var(--gallery); }
+.v-ctl svg { width: 10px; height: 10px; }
+
+.v-progress {
+  display: flex; gap: 4px;
+  padding: 0 8px;
+  border-left: 1px solid var(--line);
+}
+.vp-tick {
+  width: 28px; height: 4px;
+  background: var(--line);
+  cursor: pointer;
+  position: relative;
+}
+.vp-tick .vp-fill {
+  height: 100%; background: var(--ink);
+  transition: width 0.1s linear;
+}
+.vp-tick.done .vp-fill { width: 100% !important; }
+.vp-tick.on { background: rgba(9,9,9,0.15); }
+
+.v-time {
+  font-family: var(--mono); font-size: 9px; color: var(--muted); letter-spacing: 0.08em;
+  padding-left: 6px; border-left: 1px solid var(--line);
+}
