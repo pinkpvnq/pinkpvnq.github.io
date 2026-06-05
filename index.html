@@ -23,8 +23,8 @@
       })();
     </script>
     <title>Vortek.Tech</title>
-    <script type="module" crossorigin src="/assets/index-iUbPAmsK.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BQg_5qaL.css">
+    <script type="module" crossorigin src="/assets/index-Do39-ggu.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B46yTR8W.css">
   </head>
   <body>
     <div id="app">
@@ -32,7 +32,7 @@
         <canvas id="loader-canvas"></canvas>
         <div class="loader-wordmark">
           <span>Vortek.Tech</span>
-          <span>Loading campaign.os</span>
+          <span data-i18n="loader.loading">Loading campaign.os</span>
         </div>
         <div class="loader-progress" aria-hidden="true">
           <span></span>
@@ -42,10 +42,10 @@
       <canvas id="scene"></canvas>
 
       <header class="site-header">
-        <a class="brand" href="#top" aria-label="Vortek.Tech home">
+        <a class="brand" href="#top" aria-label="Vortek.Tech home" data-i18n-aria="aria.home">
           <span>Vortek.Tech</span>
         </a>
-        <nav class="nav" aria-label="Primary navigation">
+        <nav class="nav" aria-label="Primary navigation" data-i18n-aria="aria.primaryNav">
           <a href="#systems" data-i18n="nav.workflow">Workflow</a>
           <a href="#built-for" data-i18n="nav.builtFor">Built for</a>
           <a href="#agents" data-i18n="nav.aiHandles">AI handles</a>
@@ -53,15 +53,7 @@
           <a href="#audit" data-i18n="nav.audit">Audit</a>
         </nav>
         <div class="header-tools">
-          <select class="language-select" aria-label="Language">
-            <option value="auto">Auto</option>
-            <option value="en">EN</option>
-            <option value="ru">RU</option>
-            <option value="id">ID</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-            <option value="de">DE</option>
-          </select>
+          <button class="language-toggle" type="button" aria-label="Language: Auto" data-i18n-aria="language.aria" data-language-choice="auto">AUTO</button>
           <a class="header-cta" href="mailto:hello@vortek.tech?subject=CampaignOS%20audit" data-i18n="cta.headerAudit">Audit</a>
         </div>
       </header>
@@ -79,10 +71,10 @@
           </div>
           <div class="art-labels" aria-hidden="true">
             <span class="art-label label-main">campaign.os</span>
-            <span class="art-label label-proof">Evidence</span>
-            <span class="art-label label-people">Deliverables</span>
-            <span class="art-label label-follow">Follow-ups</span>
-            <span class="art-label label-reports">Reports</span>
+            <span class="art-label label-proof" data-i18n="flow.evidence">Evidence</span>
+            <span class="art-label label-people" data-i18n="flow.deliverables">Deliverables</span>
+            <span class="art-label label-follow" data-i18n="easier.followupsTitle">Follow-ups</span>
+            <span class="art-label label-reports" data-i18n="flow.report">Reports</span>
           </div>
           <h1 id="hero-title">
             <span data-i18n="hero.title">AI employees for PR & creator campaigns</span>
@@ -106,20 +98,20 @@
               <span data-i18n="workflow.subtitle">For teams losing time on proofs, follow-ups, client updates and campaign reporting</span>
             </p>
           </div>
-          <div class="source-flow workflow-flow" aria-label="Campaign workflow">
+          <div class="source-flow workflow-flow" aria-label="Campaign workflow" data-i18n-aria="aria.campaignWorkflow">
             <span data-i18n="flow.brief">Brief</span>
             <span data-i18n="flow.deliverables">Deliverables</span>
             <span data-i18n="flow.evidence">Evidence</span>
             <span data-i18n="flow.status">Status</span>
             <span data-i18n="flow.report">Report</span>
           </div>
-          <div class="metadata-plate workflow-meta" aria-label="System metadata">
+          <div class="metadata-plate workflow-meta" aria-label="System metadata" data-i18n-aria="aria.systemMetadata">
             <span data-i18n="workflow.reads">READS: BRIEFS / FILES / LINKS / SCREENSHOTS / CONFIRMATIONS</span>
             <span data-i18n="workflow.builds">BUILDS: FOLLOW-UPS / CLIENT UPDATES / REPORTS</span>
           </div>
         </section>
 
-        <section class="system-grid" aria-label="AI system modules">
+        <section class="system-grid" aria-label="AI system modules" data-i18n-aria="aria.systemModules">
           <article class="system-card">
             <span>01</span>
             <h3 data-i18n="easier.proofTitle">Proofs</h3>
@@ -142,7 +134,7 @@
           </article>
         </section>
 
-        <section class="built-for" id="built-for" aria-label="Campaign types">
+        <section class="built-for" id="built-for" aria-label="Campaign types" data-i18n-aria="aria.campaignTypes">
           <div class="section-label" data-i18n="builtFor.label">Built for</div>
           <div class="use-case-grid">
             <span data-i18n="builtFor.pr">Boutique PR agencies</span>
@@ -158,7 +150,7 @@
             <div>
               <h2 data-i18n="agents.title">AI handles the chase, your team keeps the relationship</h2>
             </div>
-            <div class="team-list" aria-label="CampaignOS delivery team model">
+            <div class="team-list" aria-label="CampaignOS delivery team model" data-i18n-aria="aria.deliveryModel">
               <article>
                 <span data-i18n="agents.briefTitle">Brief reader</span>
                 <p data-i18n="agents.briefText">Finds what was promised</p>
@@ -196,6 +188,7 @@
                 preload="none"
                 playsinline
                 aria-label="campaign.os desktop reporting demo"
+                data-i18n-aria="aria.desktopDemo"
               ></video>
               <video
                 class="demo-mobile-media"
@@ -204,8 +197,9 @@
                 preload="none"
                 playsinline
                 aria-label="campaign.os mobile reporting demo"
+                data-i18n-aria="aria.mobileDemo"
               ></video>
-              <button class="demo-play" type="button" aria-label="Play campaign.os demo">
+              <button class="demo-play" type="button" aria-label="Play campaign.os demo" data-i18n-aria="aria.playDemo">
                 <span class="demo-play-icon">▶</span>
                 <span>
                   <b data-i18n="demo.watch">Watch the demo</b>
@@ -248,60 +242,59 @@
         </section>
 
         <section class="engagement" id="engagement">
-          <div class="section-label">Build path</div>
+          <div class="section-label" data-i18n="engagement.label">Build path</div>
           <div class="intro-grid">
-            <h2>The smallest useful system comes first</h2>
+            <h2 data-i18n="engagement.title">The smallest useful system comes first</h2>
             <p>
-              After the audit, Vortek builds only the layer that will make the
-              current campaign easier to run and easier to report
+              <span data-i18n="engagement.subtitle">After the audit, Vortek builds only the layer that will make the current campaign easier to run and easier to report</span>
             </p>
           </div>
-          <div class="engagement-grid" aria-label="CampaignOS engagement model">
+          <div class="engagement-grid" aria-label="CampaignOS engagement model" data-i18n-aria="aria.engagementModel">
             <article>
               <span>01</span>
-              <h3>Audit</h3>
-              <p>Map one campaign workflow: promised outputs, evidence rules, follow-ups and reporting pressure points</p>
-              <strong>5-7 days</strong>
+              <h3 data-i18n="engagement.auditTitle">Audit</h3>
+              <p data-i18n="engagement.auditText">Map one campaign workflow: promised outputs, evidence rules, follow-ups and reporting pressure points</p>
+              <strong data-i18n="engagement.auditTime">5-7 days</strong>
             </article>
             <article>
               <span>02</span>
-              <h3>Tracker</h3>
-              <p>Build the first evidence tracker for deliverables, owners, statuses, links and client-ready items</p>
-              <strong>2-3 weeks</strong>
+              <h3 data-i18n="engagement.trackerTitle">Tracker</h3>
+              <p data-i18n="engagement.trackerText">Build the first evidence tracker for deliverables, owners, statuses, links and client-ready items</p>
+              <strong data-i18n="engagement.trackerTime">2-3 weeks</strong>
             </article>
             <article>
               <span>03</span>
-              <h3>AI layer</h3>
-              <p>Add AI actions for brief reading, evidence sorting, status checks, follow-ups and report drafting</p>
-              <strong>2-4 weeks</strong>
+              <h3 data-i18n="engagement.aiTitle">AI layer</h3>
+              <p data-i18n="engagement.aiText">Add AI actions for brief reading, evidence sorting, status checks, follow-ups and report drafting</p>
+              <strong data-i18n="engagement.aiTime">2-4 weeks</strong>
             </article>
             <article>
               <span>04</span>
-              <h3>Support</h3>
-              <p>Keep the reporting layer clean during active campaigns with updates, templates, reviews and support</p>
-              <strong>Monthly</strong>
+              <h3 data-i18n="engagement.supportTitle">Support</h3>
+              <p data-i18n="engagement.supportText">Keep the reporting layer clean during active campaigns with updates, templates, reviews and support</p>
+              <strong data-i18n="engagement.supportTime">Monthly</strong>
             </article>
           </div>
         </section>
 
         <section class="process" id="process">
-          <div class="section-label">How it works</div>
+          <div class="section-label" data-i18n="process.label">How it works</div>
           <div class="timeline">
             <div>
-              <strong>Map</strong>
-              <p>We map the brief, promised outputs, owners, evidence rules, follow-ups and report format</p>
+              <strong data-i18n="process.mapTitle">Map</strong>
+              <p data-i18n="process.mapText">We map the brief, promised outputs, owners, evidence rules, follow-ups and report format</p>
             </div>
             <div>
-              <strong>Model</strong>
-              <p>We define the structure: campaign, deliverable, owner, evidence, status and client update</p>
+              <strong data-i18n="process.modelTitle">Model</strong>
+              <p data-i18n="process.modelText">We define the structure: campaign, deliverable, owner, evidence, status and client update</p>
             </div>
             <div>
-              <strong>Build</strong>
-              <p>We build the tracker, views, AI prompts and reporting structure around one workflow</p>
+              <strong data-i18n="process.buildTitle">Build</strong>
+              <p data-i18n="process.buildText">We build the tracker, views, AI prompts and reporting structure around one workflow</p>
             </div>
             <div>
-              <strong>Use</strong>
-              <p>Your team runs evidence collection, follow-ups and client updates from the same live system</p>
+              <strong data-i18n="process.useTitle">Use</strong>
+              <p data-i18n="process.useText">Your team runs evidence collection, follow-ups and client updates from the same live system</p>
             </div>
           </div>
         </section>
