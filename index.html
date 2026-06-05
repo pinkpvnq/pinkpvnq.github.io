@@ -23,8 +23,8 @@
       })();
     </script>
     <title>Vortek.Tech</title>
-    <script type="module" crossorigin src="/assets/index-CV-1ggFO.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DCxf0JPI.css">
+    <script type="module" crossorigin src="/assets/index-iUbPAmsK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BQg_5qaL.css">
   </head>
   <body>
     <div id="app">
@@ -46,13 +46,24 @@
           <span>Vortek.Tech</span>
         </a>
         <nav class="nav" aria-label="Primary navigation">
-          <a href="#systems">Workflow</a>
-          <a href="#built-for">Built for</a>
-          <a href="#demo">Demo</a>
-          <a href="#audit">Audit</a>
-          <a href="#process">Process</a>
+          <a href="#systems" data-i18n="nav.workflow">Workflow</a>
+          <a href="#built-for" data-i18n="nav.builtFor">Built for</a>
+          <a href="#agents" data-i18n="nav.aiHandles">AI handles</a>
+          <a href="#demo" data-i18n="nav.demo">Demo</a>
+          <a href="#audit" data-i18n="nav.audit">Audit</a>
         </nav>
-        <a class="header-cta" href="mailto:hello@vortek.tech?subject=CampaignOS%20audit">Request audit</a>
+        <div class="header-tools">
+          <select class="language-select" aria-label="Language">
+            <option value="auto">Auto</option>
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="id">ID</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+            <option value="de">DE</option>
+          </select>
+          <a class="header-cta" href="mailto:hello@vortek.tech?subject=CampaignOS%20audit" data-i18n="cta.headerAudit">Audit</a>
+        </div>
       </header>
 
       <main id="top">
@@ -64,7 +75,7 @@
           </video>
           <div class="hero-kicker">
             <span class="product-name">campaign.os</span>
-            <span class="product-by">by Vortek.Tech</span>
+            <span class="product-by" data-i18n="brand.by">by Vortek.Tech</span>
           </div>
           <div class="art-labels" aria-hidden="true">
             <span class="art-label label-main">campaign.os</span>
@@ -74,82 +85,106 @@
             <span class="art-label label-reports">Reports</span>
           </div>
           <h1 id="hero-title">
-            AI employees for PR & creator campaigns
+            <span data-i18n="hero.title">AI employees for PR & creator campaigns</span>
           </h1>
           <div class="hero-copy">
             <p>
-              Turn briefs, links, screenshots and confirmations into live
-              campaign reporting
+              <span data-i18n="hero.subtitle">Turn briefs, links, screenshots and confirmations into live campaign reporting</span>
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="mailto:hello@vortek.tech?subject=CampaignOS%20audit">Request audit</a>
-              <a class="button ghost" href="#systems">See workflow</a>
+              <a class="button primary" href="mailto:hello@vortek.tech?subject=CampaignOS%20audit" data-i18n="cta.requestAudit">Request audit</a>
+              <a class="button ghost" href="#systems" data-i18n="cta.seeWorkflow">See workflow</a>
             </div>
           </div>
         </section>
 
         <section class="section intro" id="systems">
-          <div class="section-label">How it works</div>
+          <div class="section-label" data-i18n="workflow.label">How it works</div>
           <div class="intro-grid">
-            <h2>Brief to report, in one live workflow</h2>
+            <h2 data-i18n="workflow.title">Brief to report, in one live workflow</h2>
             <p>
-              For teams losing time on proofs, follow-ups, client updates and
-              campaign reporting
+              <span data-i18n="workflow.subtitle">For teams losing time on proofs, follow-ups, client updates and campaign reporting</span>
             </p>
           </div>
           <div class="source-flow workflow-flow" aria-label="Campaign workflow">
-            <span>Brief</span>
-            <span>Deliverables</span>
-            <span>Evidence</span>
-            <span>Status</span>
-            <span>Report</span>
+            <span data-i18n="flow.brief">Brief</span>
+            <span data-i18n="flow.deliverables">Deliverables</span>
+            <span data-i18n="flow.evidence">Evidence</span>
+            <span data-i18n="flow.status">Status</span>
+            <span data-i18n="flow.report">Report</span>
           </div>
           <div class="metadata-plate workflow-meta" aria-label="System metadata">
-            <span>READS: BRIEFS / FILES / LINKS / SCREENSHOTS / CONFIRMATIONS</span>
-            <span>BUILDS: FOLLOW-UPS / CLIENT UPDATES / REPORTS</span>
+            <span data-i18n="workflow.reads">READS: BRIEFS / FILES / LINKS / SCREENSHOTS / CONFIRMATIONS</span>
+            <span data-i18n="workflow.builds">BUILDS: FOLLOW-UPS / CLIENT UPDATES / REPORTS</span>
           </div>
         </section>
 
         <section class="system-grid" aria-label="AI system modules">
           <article class="system-card">
             <span>01</span>
-            <h3>Promises</h3>
-            <p>Stories, posts, videos, attendance, coverage and partner outputs are mapped from the campaign brief</p>
+            <h3 data-i18n="easier.proofTitle">Proofs</h3>
+            <p data-i18n="easier.proofText">Every link, screenshot and file lands in the right campaign item</p>
           </article>
           <article class="system-card">
             <span>02</span>
-            <h3>Proof</h3>
-            <p>Links, screenshots, photos, files, confirmations and metrics stay attached to the right campaign item</p>
+            <h3 data-i18n="easier.followupsTitle">Follow-ups</h3>
+            <p data-i18n="easier.followupsText">Your team sees what is missing and who needs the next reminder</p>
           </article>
           <article class="system-card">
             <span>03</span>
-            <h3>Status</h3>
-            <p>Your team sees what is collected, missing, waiting on follow-up, ready for review and ready for the client</p>
+            <h3 data-i18n="easier.statusTitle">Status</h3>
+            <p data-i18n="easier.statusText">Each campaign item is ready, waiting, missing or client-ready</p>
           </article>
           <article class="system-card">
             <span>04</span>
-            <h3>Reports</h3>
-            <p>Weekly updates and final reports are built from live evidence instead of last-minute reconstruction</p>
+            <h3 data-i18n="easier.reportsTitle">Reports</h3>
+            <p data-i18n="easier.reportsText">Client updates are drafted from live proof, not last-minute memory</p>
           </article>
         </section>
 
         <section class="built-for" id="built-for" aria-label="Campaign types">
-          <div class="section-label">Built for</div>
+          <div class="section-label" data-i18n="builtFor.label">Built for</div>
           <div class="use-case-grid">
-            <span>Boutique PR agencies</span>
-            <span>Creator campaigns</span>
-            <span>Influencer activations</span>
-            <span>Brand events</span>
+            <span data-i18n="builtFor.pr">Boutique PR agencies</span>
+            <span data-i18n="builtFor.creator">Creator campaigns</span>
+            <span data-i18n="builtFor.influencer">Influencer activations</span>
+            <span data-i18n="builtFor.events">Brand events</span>
+          </div>
+        </section>
+
+        <section class="team-model" id="agents">
+          <div class="section-label" data-i18n="agents.label">What AI handles</div>
+          <div class="team-grid">
+            <div>
+              <h2 data-i18n="agents.title">AI handles the chase, your team keeps the relationship</h2>
+            </div>
+            <div class="team-list" aria-label="CampaignOS delivery team model">
+              <article>
+                <span data-i18n="agents.briefTitle">Brief reader</span>
+                <p data-i18n="agents.briefText">Finds what was promised</p>
+              </article>
+              <article>
+                <span data-i18n="agents.proofTitle">Proof sorter</span>
+                <p data-i18n="agents.proofText">Puts evidence in the right place</p>
+              </article>
+              <article>
+                <span data-i18n="agents.statusTitle">Status checker</span>
+                <p data-i18n="agents.statusText">Shows what is ready or missing</p>
+              </article>
+              <article>
+                <span data-i18n="agents.reportTitle">Report drafter</span>
+                <p data-i18n="agents.reportText">Turns proof into client updates</p>
+              </article>
+            </div>
           </div>
         </section>
 
         <section class="product-demo" id="demo">
-          <div class="section-label">Product demo</div>
+          <div class="section-label" data-i18n="demo.label">Product demo</div>
           <div class="intro-grid demo-intro">
-            <h2>Watch campaign evidence become a client update</h2>
+            <h2 data-i18n="demo.title">Watch campaign evidence become a client update</h2>
             <p>
-              A 21-second walkthrough of the reporting layer: proof intake,
-              missing items, follow-up prompts and report readiness
+              <span data-i18n="demo.subtitle">A 21-second walkthrough of proof intake, missing items and report readiness</span>
             </p>
           </div>
           <div class="demo-stage">
@@ -173,43 +208,41 @@
               <button class="demo-play" type="button" aria-label="Play campaign.os demo">
                 <span class="demo-play-icon">▶</span>
                 <span>
-                  <b>Watch the demo</b>
-                  <small class="demo-time-desktop">Press play · 21 seconds</small>
-                  <small class="demo-time-mobile">Press play · 21 seconds</small>
+                  <b data-i18n="demo.watch">Watch the demo</b>
+                  <small class="demo-time-desktop" data-i18n="demo.time">Press play · 21 seconds</small>
+                  <small class="demo-time-mobile" data-i18n="demo.time">Press play · 21 seconds</small>
                 </span>
               </button>
             </div>
             <div class="demo-complete" hidden>
-              <a class="button primary" href="#contact">Request audit</a>
+              <a class="button primary" href="#contact" data-i18n="cta.requestAudit">Request audit</a>
             </div>
           </div>
         </section>
 
         <section class="audit" id="audit">
-          <div class="section-label">AI Workflow Audit</div>
+          <div class="section-label" data-i18n="audit.label">AI Workflow Audit</div>
           <div class="intro-grid audit-intro">
-            <h2>Start with one workflow, not a full platform</h2>
+            <h2 data-i18n="audit.title">Start with one workflow, not a full platform</h2>
             <p>
-              The audit turns one messy client-facing process into a clear map:
-              what to track, where proof enters, what AI should draft, and what
-              your team still controls
+              <span data-i18n="audit.subtitle">We map the campaign bottleneck and show the first AI employee to build</span>
             </p>
           </div>
           <div class="audit-grid">
             <article>
               <span>01</span>
-              <h3>Evidence map</h3>
-              <p>Campaign promises become clear evidence requirements: links, screenshots, photos, confirmations, metrics and files</p>
+              <h3 data-i18n="audit.evidenceTitle">Evidence map</h3>
+              <p data-i18n="audit.evidenceText">What proof is needed</p>
             </article>
             <article>
               <span>02</span>
-              <h3>Status map</h3>
-              <p>The audit shows which items are ready, in review, waiting, missing or ready for the next client update</p>
+              <h3 data-i18n="audit.statusTitle">Status map</h3>
+              <p data-i18n="audit.statusText">What is ready or missing</p>
             </article>
             <article>
               <span>03</span>
-              <h3>Build plan</h3>
-              <p>You get the first system blueprint: tracker, views, AI actions, reporting flow and launch sequence</p>
+              <h3 data-i18n="audit.planTitle">Build plan</h3>
+              <p data-i18n="audit.planText">What to build first</p>
             </article>
           </div>
         </section>
@@ -251,33 +284,6 @@
           </div>
         </section>
 
-        <section class="team-model" id="agents">
-          <div class="section-label">What AI handles</div>
-          <div class="team-grid">
-            <div>
-              <h2>AI helps with the operational chase, not the relationship</h2>
-            </div>
-            <div class="team-list" aria-label="CampaignOS delivery team model">
-              <article>
-                <span>Brief reader</span>
-                <p>Extracts promised outputs, evidence rules, dates, people and report requirements from the brief</p>
-              </article>
-              <article>
-                <span>Evidence sorter</span>
-                <p>Sorts uploaded links, screenshots, posts, photos, files and confirmations into the right item</p>
-              </article>
-              <article>
-                <span>Status checker</span>
-                <p>Flags what is complete, missing, waiting on follow-up or ready for the next client update</p>
-              </article>
-              <article>
-                <span>Report drafter</span>
-                <p>Turns organized evidence into the first draft of a weekly update or final report structure</p>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section class="process" id="process">
           <div class="section-label">How it works</div>
           <div class="timeline">
@@ -302,8 +308,8 @@
 
         <section class="contact" id="contact">
           <div>
-            <div class="section-label">Request workflow audit</div>
-            <h2>Send one campaign workflow We will map the reporting system to build first</h2>
+            <div class="section-label" data-i18n="contact.label">Request workflow audit</div>
+            <h2 data-i18n="contact.title">Send one campaign workflow We map the first reporting system</h2>
           </div>
           <form
             class="intake-form"
@@ -314,30 +320,30 @@
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <label>
-              <span>Name</span>
+              <span data-i18n="form.name">Name</span>
               <input name="name" autocomplete="name" required />
             </label>
             <label>
-              <span>Email</span>
+              <span data-i18n="form.email">Email</span>
               <input name="email" type="email" autocomplete="email" required />
             </label>
             <label>
-              <span>Agency / team</span>
+              <span data-i18n="form.team">Agency / team</span>
               <input name="company" autocomplete="organization" />
             </label>
             <label>
-              <span>Current tools</span>
-              <input name="current_system" placeholder="Drive / Sheets / Notion / Airtable / Slack" />
+              <span data-i18n="form.tools">Current tools</span>
+              <input name="current_system" placeholder="Drive / Sheets / Notion / Airtable / Slack" data-i18n-placeholder="form.toolsPlaceholder" />
             </label>
             <label>
-              <span>Campaign type</span>
-              <input name="campaign_type" placeholder="PR / creator / event / influencer / brand" />
+              <span data-i18n="form.type">Campaign type</span>
+              <input name="campaign_type" placeholder="PR / creator / event / influencer / brand" data-i18n-placeholder="form.typePlaceholder" />
             </label>
             <label class="full">
-              <span>What campaign workflow needs to be easier to report?</span>
+              <span data-i18n="form.workflow">What campaign workflow needs to be easier to report?</span>
               <textarea name="campaign_process" rows="4"></textarea>
             </label>
-            <button class="button primary large" type="submit">Request workflow audit</button>
+            <button class="button primary large" type="submit" data-i18n="contact.submit">Request workflow audit</button>
           </form>
         </section>
       </main>
